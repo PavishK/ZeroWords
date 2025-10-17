@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@tailwind utilities;
+
+*{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@theme {
+    --color-bg:#FAF9EE;
+    --color-primary:#A2AF9B;
+    --color-secondary:#DCCFC0;
+    --color-text:#333333;
+    --color-heading:#A2AF9B;
+    --color-border:#EEEEEE;
+}
+
+.nav-item {
+    @apply border-transparent font-normal
+}
+.nav-item.active {
+    @apply border-border border-b-2 font-medium
+}
