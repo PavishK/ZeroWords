@@ -1,3 +1,4 @@
+```
 # 📝 ZeroWords
 
 **ZeroWords** is a simple and modern **blog website** built with a powerful tech stack —  
@@ -67,12 +68,12 @@ zerowords/
 
 3. Activate the virtual environment:
 
-   * Windows:
+   * **Windows:**
 
      ```bash
      env\Scripts\activate
      ```
-   * macOS/Linux:
+   * **macOS/Linux:**
 
      ```bash
      source env/bin/activate
@@ -114,13 +115,13 @@ The backend will run at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
    npm install
    ```
 
-2. Create dotenv file and add:
+3. Create a `.env` file and add:
 
    ```bash
-   VITE_PUBLIC_SERVER_URL = "http://127.0.0.1:8000"
+   VITE_PUBLIC_SERVER_URL="http://127.0.0.1:8000"
    ```
 
-3. Start the development server:
+4. Start the development server:
 
    ```bash
    npm run dev
@@ -168,13 +169,11 @@ DB_PORT=3306
 
 ### 🏠 Homepage
 
-![Homepage Screenshot](./screenshots/home.png)
+![Homepage Screenshot](https://github.com/user-attachments/assets/0e094eab-917e-446d-b63c-53aaa296e968)
 
 ### 📝 Create Post
 
-![Create Post Screenshot](./screenshots/create-post.png)
-
-> 💡 Place your screenshots inside a folder named `/screenshots` in the root directory.
+![Create Post Screenshot](https://github.com/user-attachments/assets/8a401a27-a526-403c-9908-97f37cbe4b39)
 
 ---
 
@@ -207,7 +206,7 @@ When deploying:
   ALLOWED_HOSTS=yourbackenddomain.com
   FRONTEND_URL=https://yourfrontenddomain.com
   ```
-* Add environment variables in your hosting service (Render, Railway, etc.)
+* Add environment variables in your hosting platform (Render, Railway, etc.)
 * Collect static files:
 
   ```bash
@@ -218,9 +217,8 @@ When deploying:
 
 ## 👨‍💻 Author
 
-**Developed by:** [Pc]
-
-🌐 Portfolio: [yourwebsite.com](https://pavishk.dev)
+**Developed by:** Pc
+🌐 Portfolio: [pavishk.dev](https://pavishk.dev)
 
 ---
 
@@ -229,5 +227,3 @@ When deploying:
 This project is open-source and available under the **MY License**.
 
 ```
-
----
