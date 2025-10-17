@@ -1,7 +1,6 @@
-```
 # 📝 ZeroWords
 
-**ZeroWords** is a simple and modern **blog website** built with a powerful tech stack —  
+**ZeroWords** is a simple and modern **blog website** built with a powerful tech stack.  
 ✨ **Frontend:** React.js (Vite)  
 ⚙️ **Backend:** Django REST Framework  
 
@@ -12,13 +11,14 @@ Users can create, read, update, and delete blog posts with an intuitive UI and s
 ## 🚀 Features
 
 - 📰 Create and manage blog posts  
-- 👤 User authentication (login/signup planned)  
+- 👤 User authentication *(login/signup planned)*  
 - ⚡ Fast frontend built with **React + Vite**  
 - 🔐 Secure backend using **Django REST Framework**  
-- 🔄 API-driven architecture (frontend and backend separated)  
+- 🔄 API-driven architecture (frontend & backend separated)  
 - 🎨 Simple, clean, and responsive UI  
 
 ---
+```markdown
 
 ## 🧩 Project Structure
 
@@ -67,17 +67,17 @@ zerowords/
    ```
 
 3. Activate the virtual environment:
+   **Windows:**
 
-   * **Windows:**
+   ```bash
+   env\Scripts\activate
+   ```
 
-     ```bash
-     env\Scripts\activate
-     ```
-   * **macOS/Linux:**
+   **macOS/Linux:**
 
-     ```bash
-     source env/bin/activate
-     ```
+   ```bash
+   source env/bin/activate
+   ```
 
 4. Install dependencies:
 
@@ -97,7 +97,7 @@ zerowords/
    python myproject/manage.py runserver
    ```
 
-The backend will run at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+Backend runs at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
 ---
 
@@ -127,7 +127,7 @@ The backend will run at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
    npm run dev
    ```
 
-The frontend will run at **[http://localhost:5173/](http://localhost:5173/)**
+Frontend runs at **[http://localhost:5173/](http://localhost:5173/)**
 
 ---
 
@@ -179,19 +179,19 @@ DB_PORT=3306
 
 ## 🧰 Tech Stack
 
-**Frontend:**
+**Frontend**
 
 * React.js (Vite)
 * Axios
 * Tailwind CSS
 
-**Backend:**
+**Backend**
 
 * Django
 * Django REST Framework
 * django-cors-headers
 * python-dotenv
-* MySQL (or SQLite)
+* MySQL *(or SQLite)*
 
 ---
 
@@ -199,19 +199,19 @@ DB_PORT=3306
 
 When deploying:
 
-* Set `DEBUG=False` in `.env`
-* Update:
+1. Set `DEBUG=False` in `.env`
+2. Update:
 
-  ```ini
-  ALLOWED_HOSTS=yourbackenddomain.com
-  FRONTEND_URL=https://yourfrontenddomain.com
-  ```
-* Add environment variables in your hosting platform (Render, Railway, etc.)
-* Collect static files:
+   ```ini
+   ALLOWED_HOSTS=yourbackenddomain.com
+   FRONTEND_URL=https://yourfrontenddomain.com
+   ```
+3. Add environment variables in your hosting platform *(Render, Railway, etc.)*
+4. Collect static files:
 
-  ```bash
-  python myproject/manage.py collectstatic
-  ```
+   ```bash
+   python myproject/manage.py collectstatic
+   ```
 
 ---
 
