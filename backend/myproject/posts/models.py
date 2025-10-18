@@ -3,7 +3,7 @@ from django.conf import settings
 
 
 class Posts(models.Model):
-    author = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete= models.CASCADE, related_name='posts')
+    author = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete= models.CASCADE)
     title = models.TextField()
     content = models.TextField()
     image_url = models.URLField(max_length=1000)

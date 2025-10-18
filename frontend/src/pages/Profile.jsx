@@ -18,7 +18,7 @@ function Profile() {
       setUser(res.data.data);
     } catch (error) {
       toast.error('Please login to continue');
-      nav('/login');
+      nav('/auth/login');
     } finally {
       setTimeout(() => setLoading(false), 1000);
     }
@@ -33,7 +33,7 @@ function Profile() {
       <div className="min-h-screen flex flex-col items-center justify-center px-6 bg-bg text-text">
         <div className="max-w-md w-full rounded-2xl shadow-lg p-8 text-center relative overflow-hidden bg-secondary border border-border">
           {/* Decorative Circle */}
-          <div className="absolute w-40 h-40 rounded-full opacity-20 -top-10 -right-10 bg-primary"></div>
+          <div className="absolute w-40 animate-pulse h-40 rounded-full opacity-20 -top-10 -right-10 bg-primary"></div>
 
           {/* User Logo or Skeleton */}
           {loading ? (
