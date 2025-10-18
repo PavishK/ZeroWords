@@ -23,6 +23,7 @@ function Register() {
     }
 
     try {
+      setLoading(true);
       await serverApi.post("/api/auth/register-user/", registerData);
       toast.success('Registered successful!', { id:"registerId"});
       setTimeout(()=>router('/auth/login'),300);
@@ -33,6 +34,8 @@ function Register() {
         toast.error( error.response.data.username, { id:"registerId" });
       if( error.response.data?.password )
         toast.error( error.response.data.password, { id:"registerId" });
+    } finally {
+      setLoading(false);
     }
   }
 
