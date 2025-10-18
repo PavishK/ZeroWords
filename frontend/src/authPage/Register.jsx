@@ -16,13 +16,15 @@ function Register() {
 
   const onClickRegisterBtn = async(e) => {
     e.preventDefault();
+    toast.loading('Creating your account...', { id:"registerId"});
     if( !registerData.username || !registerData.email || !registerData.password) {
-      toast.error("Please fill out the fields!");
+      toast.error("Please fill out the fields!", { id:"registerId"});
       return;
     }
+
     try {
       await serverApi.post("/api/auth/register-user/", registerData);
-      toast.success('Registered successful!');
+      toast.success('Registered successful!', { id:"registerId"});
       setTimeout(()=>router('/auth/login'),300);
     } catch (error) {
       if( error.response.data?.email)
