@@ -17,15 +17,7 @@ function App() {
 
   useEffect(()=>{
   const startServer = async() => {
-    try {
-      toast.loading('Starting up server...', {id:"Start"});
-      await serverApi.get('/api/posts/start-up-server/');
-      toast.success('Server connected!', {id:"Start"});
-    } catch (error) {
-      toast.loading('Retrying connecting server...', {id:"Start"});
-    } finally {
-      toast.success('Server running...', {id:"Start"});
-    }
+    await serverApi.get('/api/posts/start-up-server/');
   }
 
   startServer();
