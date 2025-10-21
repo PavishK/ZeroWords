@@ -28,7 +28,7 @@ function Posts() {
     } catch (error) {
       toast.error("Please login to continue viewing!");
     } finally {
-      setTimeout(()=>setMakeLoading(false),2000);
+      setTimeout(()=>setMakeLoading(false),1000);
     }
   }
 
@@ -40,7 +40,7 @@ function Posts() {
     } catch (error) {
       console.log(error);
     } finally {
-      setTimeout(()=>setLoading(false),3000);
+      setTimeout(()=>setLoading(false),800);
     }
   }
   

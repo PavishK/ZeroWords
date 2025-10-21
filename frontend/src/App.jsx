@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Blog from './pages/Blogs';
@@ -10,9 +10,26 @@ import Login from './authPage/Login';
 import Register from './authPage/Register';
 import AuthLayout from './authPage/AuthLayout';
 import AuthProvider from './context/auth';
-import { Toaster }  from 'react-hot-toast';
+import toast, { Toaster }  from 'react-hot-toast';
+import { serverApi } from './services/api';
 
 function App() {
+
+  useEffect(()=>{
+  const startServer = async() => {
+    try {
+      toast.loading('Starting up server...', {id:"Start"});
+      await serverApi.get('/api/posts/start-up-server/');
+      toast.success('Server connected!', {id:"Start"});
+    } catch (error) {
+      toast.loading('Retrying connecting server...', {id:"Start"});
+    } finally {
+      toast.success('Server running...', {id:"Start"});
+    }
+  }
+
+  startServer();
+  },[])
   return (
     <>
     <AuthProvider>

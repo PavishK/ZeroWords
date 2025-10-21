@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { User2Icon, Lock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { authApi } from "../services/api";
@@ -7,7 +7,7 @@ import { useAuth } from "../context/auth";
 
 function Login() {
   const router = useNavigate();
-  const { setUser } = useAuth();
+  const { setUser, fetchUser } = useAuth();
   const [ loginData, setLoginData ] = useState({ username:"", password:""});
   const [showPassword, setShowPassword] = useState(false);
   const [ loading, setLoading ] = useState(false);
@@ -35,6 +35,7 @@ function Login() {
       setLoading(false);
     }
   }
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-bg text-text">

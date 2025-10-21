@@ -7,6 +7,11 @@ from .models import Posts
 from users.middleware import jwt_token_required
 
 
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def start_up_server(request):
+    return Response("Server is started", status=status.HTTP_200_OK)
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 @jwt_token_required

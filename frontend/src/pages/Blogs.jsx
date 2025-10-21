@@ -27,7 +27,7 @@ function Blogs() {
     } catch (error) {
       console.log(error);
     } finally {
-      setTimeout(()=>setLoading(false),3000);
+      setTimeout(()=>setLoading(false),800);
     }
   }
 

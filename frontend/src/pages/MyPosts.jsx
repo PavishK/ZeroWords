@@ -35,7 +35,7 @@ export default function MyPosts() {
         setTimeout(()=>nav('/auth/login', { replace:true }),300);
       }
     } finally {
-      setTimeout(()=>setLoading(false),2000);
+      setTimeout(()=>setLoading(false),800);
     }
   }
 

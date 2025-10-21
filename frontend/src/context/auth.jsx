@@ -47,7 +47,7 @@ export default function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, loading }}>
+    <AuthContext.Provider value={{ user, setUser, loading, fetchUser }}>
       {/* ✅ Only render children when loading is done */}
       {!loading && children}
     </AuthContext.Provider>

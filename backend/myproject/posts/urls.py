@@ -1,8 +1,9 @@
 from django.urls import path
 from .views import get_posts, get_post_by_id, get_posts_count, get_posts_by_user_id
-from .views import save_post, delete_post_by_id, update_post_by_id
+from .views import save_post, delete_post_by_id, update_post_by_id, start_up_server
 
 urlpatterns = [
+    path('start-up-server/', view=start_up_server, name="StartUpServer"),
     path('save-post/', view=save_post, name="SavePost"),
     path('get-posts/', view=get_posts, name="GetPosts"),
     path('get-posts-count/', view=get_posts_count, name="GetPostsCount"),
