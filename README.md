@@ -1,53 +1,120 @@
-# 📝 ZeroWords
+# 📝 ZeroWords – Minimal Blogging Platform
 
-**ZeroWords** is a simple and modern **blog website** built with a powerful tech stack.  
+**ZeroWords** is a modern, full-stack **blogging website** where users can create, publish, and manage blog posts with a clean and distraction-free writing experience.
+
 ✨ **Frontend:** React.js (Vite)  
 ⚙️ **Backend:** Django REST Framework  
+🌍 **Live:** https://zerowords.netlify.app/
 
-Users can create, read, update, and delete blog posts with an intuitive UI and secure backend API.
+> ⏳ **Note:** Initial load may take **3–4 minutes** due to backend cold start (free hosting).
+
+---
+
+## 🌟 Highlights
+
+- 📰 Create, edit, and delete blog posts
+- 👤 User authentication (login & register)
+- 📊 Personal dashboard with post count
+- 🧾 “My Posts” management (edit / delete)
+- ⚡ Fast React + Vite frontend
+- 🔐 Secure REST API backend
+- 🎨 Clean, minimal, responsive UI
 
 ---
 
 ## 🚀 Features
 
-- 📰 Create and manage blog posts  
-- 👤 User authentication *(login/signup planned)*  
-- ⚡ Fast frontend built with **React + Vite**  
-- 🔐 Secure backend using **Django REST Framework**  
-- 🔄 API-driven architecture (frontend & backend separated)  
-- 🎨 Simple, clean, and responsive UI  
+- ✍️ **Create Blog Posts**
+- 🛠️ **Edit & Delete Your Posts**
+- 🔐 **User Authentication**
+- 👤 **Profile with Published Post Count**
+- 📄 **My Posts Dashboard**
+- 🔄 **REST API based architecture**
+- 📱 **Responsive Design**
 
 ---
-```markdown
+
+## 🌍 Live Demo
+
+🔗 **ZeroWords Website**  
+👉 https://zerowords.netlify.app/
+
+> Backend may take a few minutes to wake up on first request.
+
+---
+
+## 🖼️ Screenshots
+
+### 🏠 Home Page
+![Home](https://github.com/user-attachments/assets/05c9499d-0561-4d44-a4cf-2e700d242413)
+
+### ℹ️ About Page
+![About](https://github.com/user-attachments/assets/98bba158-ddb9-423d-8b24-313b42adaa0e)
+
+### 🔐 Authentication
+**Login**
+![Login](https://github.com/user-attachments/assets/5305bd41-ca57-4bf3-96c1-9fb44d534bd0)
+
+**Register**
+![Register](https://github.com/user-attachments/assets/f16cab02-1177-40cb-a563-b486514e5092)
+
+### ✍️ Create Post
+![Create Post](https://github.com/user-attachments/assets/d255a04d-0549-4bb6-854d-e0942d6297ff)
+
+### 👤 Profile & Logout
+![Profile](https://github.com/user-attachments/assets/0c71de67-8923-403c-b46d-9789290f3135)
+
+### 🗂️ My Posts (Edit / Delete)
+![My Posts](https://github.com/user-attachments/assets/4e961734-59f7-404f-84d9-7c20d0a57a42)
+
+### 📊 Profile – Post Count
+![Post Count](https://github.com/user-attachments/assets/5ed8f50a-5636-4753-ab08-16c9e3934e04)
+
+---
 
 ## 🧩 Project Structure
 
 ```
 
 zerowords/
-├── frontend/                  # React.js (Vite) app
+├── frontend/                  # React (Vite)
 │   ├── src/
 │   ├── public/
-│   ├── package.json
 │   ├── vite.config.js
-│   └── .gitignore
+│   └── package.json
 │
-└── backend/                   # Django REST Framework app
-├── env/                   # Virtual environment (ignored in git)
-├── myproject/             # Django project folder
+└── backend/                   # Django REST Framework
+├── env/                   # Virtual environment (ignored)
+├── myproject/
 │   ├── manage.py
-│   ├── .env               # Environment variables (ignored in git)
-│   ├── myproject/         # Django settings and core config
+│   ├── .env               # Environment variables (ignored)
+│   ├── myproject/
 │   │   ├── settings.py
 │   │   ├── urls.py
-│   │   ├── wsgi.py
-│   │   └── asgi.py
-│   ├── posts/             # Blog app (Post APIs)
-│   └── users/             # User app (User management APIs)
-├── requirements.txt       # Backend dependencies
-└── .gitignore             # Ignore env, .env, cache files
+│   │   ├── asgi.py
+│   │   └── wsgi.py
+│   ├── posts/             # Blog APIs
+│   └── users/             # User APIs
+├── requirements.txt
+└── .gitignore
 
 ````
+
+---
+
+## 🧠 Tech Stack
+
+### 🎨 Frontend
+- React.js (Vite)
+- Tailwind CSS
+- Axios
+
+### ⚙️ Backend
+- Django
+- Django REST Framework
+- django-cors-headers
+- python-dotenv
+- MySQL *(SQLite supported)*
 
 ---
 
@@ -55,175 +122,131 @@ zerowords/
 
 ### 🖥️ Backend (Django)
 
-1. Navigate to the backend folder:
-   ```bash
-   cd backend
+```bash
+cd backend
+python -m venv env
 ````
 
-2. Create a virtual environment:
+Activate environment:
 
-   ```bash
-   python -m venv env
-   ```
+**Windows**
 
-3. Activate the virtual environment:
-   **Windows:**
+```bash
+env\Scripts\activate
+```
 
-   ```bash
-   env\Scripts\activate
-   ```
+**macOS / Linux**
 
-   **macOS/Linux:**
+```bash
+source env/bin/activate
+```
 
-   ```bash
-   source env/bin/activate
-   ```
+Install dependencies:
 
-4. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Run migrations:
 
-5. Run migrations:
+```bash
+python myproject/manage.py migrate
+```
 
-   ```bash
-   python myproject/manage.py migrate
-   ```
+Start server:
 
-6. Start the backend server:
+```bash
+python myproject/manage.py runserver
+```
 
-   ```bash
-   python myproject/manage.py runserver
-   ```
-
-Backend runs at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+📍 Backend: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ---
 
 ### 💻 Frontend (React + Vite)
 
-1. Navigate to the frontend folder:
+```bash
+cd frontend
+npm install
+```
 
-   ```bash
-   cd frontend
-   ```
+Create `.env` file:
 
-2. Install dependencies:
+```env
+VITE_PUBLIC_SERVER_URL="YOUR_BACKEND_URL"
+```
 
-   ```bash
-   npm install
-   ```
+Run frontend:
 
-3. Create a `.env` file and add:
+```bash
+npm run dev
+```
 
-   ```bash
-   VITE_PUBLIC_SERVER_URL="http://127.0.0.1:8000"
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-Frontend runs at **[http://localhost:5173/](http://localhost:5173/)**
+📍 Frontend: [http://localhost:5173/](http://localhost:5173/)
 
 ---
 
-## 🔑 Environment Variables
+## 🔐 Environment Variables (Hidden)
 
-### Backend `.env` file (`backend/myproject/.env`)
+### Backend `.env`
 
 ```ini
-SECRET_KEY=your-secret-key
+SECRET_KEY=YOUR_SECRET_KEY
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
 
-# CORS / CSRF
 FRONTEND_URL=http://localhost:5173
 
-# Database (MySQL Example)
-DB_NAME=your_db_name
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
+DB_NAME=YOUR_DB_NAME
+DB_USER=YOUR_DB_USER
+DB_PASSWORD=YOUR_DB_PASSWORD
 DB_HOST=localhost
 DB_PORT=3306
 ```
+
+> ❌ No secrets are committed to the repository.
 
 ---
 
 ## 🧠 API Overview
 
-| Endpoint           | Method | Description       |
-| ------------------ | ------ | ----------------- |
-| `/api/posts/`      | GET    | List all posts    |
-| `/api/posts/<id>/` | GET    | Get post details  |
-| `/api/posts/`      | POST   | Create a new post |
-| `/api/posts/<id>/` | PUT    | Update a post     |
-| `/api/posts/<id>/` | DELETE | Delete a post     |
-
----
-
-## 📸 Screenshots
-
-### 🏠 Homepage
-
-![Homepage Screenshot](https://github.com/user-attachments/assets/0e094eab-917e-446d-b63c-53aaa296e968)
-
-### 📝 Create Post
-
-![Create Post Screenshot](https://github.com/user-attachments/assets/8a401a27-a526-403c-9908-97f37cbe4b39)
-
----
-
-## 🧰 Tech Stack
-
-**Frontend**
-
-* React.js (Vite)
-* Axios
-* Tailwind CSS
-
-**Backend**
-
-* Django
-* Django REST Framework
-* django-cors-headers
-* python-dotenv
-* MySQL *(or SQLite)*
+| Endpoint           | Method | Description    |
+| ------------------ | ------ | -------------- |
+| `/api/posts/`      | GET    | List all posts |
+| `/api/posts/`      | POST   | Create post    |
+| `/api/posts/<id>/` | GET    | Post details   |
+| `/api/posts/<id>/` | PUT    | Update post    |
+| `/api/posts/<id>/` | DELETE | Delete post    |
 
 ---
 
 ## 🛡️ Deployment Notes
 
-When deploying:
+* Set `DEBUG=False`
+* Update `ALLOWED_HOSTS`
+* Configure `FRONTEND_URL`
+* Add environment variables in hosting platform
+* Run:
 
-1. Set `DEBUG=False` in `.env`
-2. Update:
-
-   ```ini
-   ALLOWED_HOSTS=yourbackenddomain.com
-   FRONTEND_URL=https://yourfrontenddomain.com
-   ```
-3. Add environment variables in your hosting platform *(Render, Railway, etc.)*
-4. Collect static files:
-
-   ```bash
-   python myproject/manage.py collectstatic
-   ```
+```bash
+python myproject/manage.py collectstatic
+```
 
 ---
 
 ## 👨‍💻 Author
 
-**Developed by:** Pc
-🌐 Portfolio: [pavishk.dev](https://pavishk.dev)
+**Pavish K**
+
+🌐 Portfolio: [https://pavishk.dev](https://pavishk.dev)
+🐙 GitHub: [https://github.com/PavishK](https://github.com/PavishK)
 
 ---
 
 ## 🪪 License
 
-This project is open-source and available under the **MY License**.
+This project is licensed under **MY License**.
 
-```
+---
+
+⭐ If you found this useful, **give the repo a star!**
